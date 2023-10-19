@@ -10,7 +10,7 @@ from ultralytics.yolo.utils.plotting import Annotator, colors
 
 
 # Initialize the models
-model_sample_model = YOLO("D:/Data/Dogs_Innopolis_learned/runs/detect/train4/weights/best.pt")
+model_sample_model = YOLO("./OurLearned/best.pt")
 
 
 def get_image_from_bytes(binary_image: bytes) -> Image:
