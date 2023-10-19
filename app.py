@@ -148,3 +148,7 @@ def detect_sample_model(input_image: Image) -> pd.DataFrame:
         conf=0.5,
     )
     return predict
+
+
+def test_githubactions():
+    return 4
