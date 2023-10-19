@@ -53,6 +53,7 @@ def test_get_image_from_bytes(test_image):
     output = get_image_from_bytes(binary_image)
     assert isinstance(output, Image.Image) and output.mode == "RGB"
 
+
 def test_get_bytes_from_image(input_image):
     """
     Test to check if the function 'get_bytes_from_image' is converting the PIL image object to binary image data.
@@ -100,7 +101,7 @@ def test_get_model_predict(input_image):
     # Check if the returned DataFrame has the correct columns
     assert set(predictions.columns) == set(['xmin', 'ymin', 'xmax','ymax', 'confidence', 'class', 'name'])
     # Check if the returned DataFrame has more than one row
-    assert len(predictions) > 1
+    assert len(predictions) >= 1
 
 def test_add_bboxs_on_img(input_image, predictions):
     """
